@@ -1,20 +1,25 @@
-
+let click = 0
 let countEl = document.getElementById("count-el")
 
-console.log(countEl)
-
-let click = 0
-
 function increment() {
-    click = click + 1
-    countEl.innerText = click
+    click += 1
+    countEl.textContent = click
 }
 
 let saveEl = document.getElementById("save-el")
 
-console.log(saveEl)
-
 function save() {
-    console.log(click)
+    let countStr = + click + " - "
 
+    saveEl.textContent += countStr
+    countEl.textContent = 0
+    click = 0
 }
+console.log("Let's count people on the subway!")
+
+
+
+
+
+
+
